@@ -1,0 +1,5 @@
+soupsieve
+requests
+selenium
+beautifulsoup4
+urllib3

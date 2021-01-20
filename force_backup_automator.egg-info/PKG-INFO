@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: force-backup-automator
+Version: 0.5
+Summary: Automates download of the Export Data Weekly Service
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: # force-backup-automator
+        
+        force-backup-automator is a library to automate the downloads of backups via the Salesforce Weekly Export Service
+        
+        ## Installation
+        
+        Use the package manager [pip](https://pip.pypa.io/en/stable/) to install.
+        
+        ```bash
+        pip install force-backup-automator
+        ```
+        
+        ## Usage
+        
+        ```python
+        from force-backup-automator import BackupController
+        
+        backup_instance = BackupController(driver_location='./chromedriver',org_link='ORG MAIN URL',is_headless=0)
+        
+        backup_instance.download_backups(download_location='TARGET LOCATION',backup_url='ORG URL/lightning/setup/DataManagementExport/home',user_name='USERNAME',password='PASSWORD')
+        ```
+        
+        ## Contributing
+        Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+        
+        Please make sure to update tests as appropriate.
+        
+        ## License
+        [MIT](https://choosealicense.com/licenses/mit/)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown

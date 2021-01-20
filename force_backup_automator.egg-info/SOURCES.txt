@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+force_backup_automator/BackupController.py
+force_backup_automator/__init__.py
+force_backup_automator.egg-info/PKG-INFO
+force_backup_automator.egg-info/SOURCES.txt
+force_backup_automator.egg-info/dependency_links.txt
+force_backup_automator.egg-info/not-zip-safe
+force_backup_automator.egg-info/requires.txt
+force_backup_automator.egg-info/top_level.txt
