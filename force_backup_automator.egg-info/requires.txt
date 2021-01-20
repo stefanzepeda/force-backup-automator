@@ -1,4 +1,4 @@
-soupsieve
+lxml
 requests
 selenium
 beautifulsoup4
