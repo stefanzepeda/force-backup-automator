@@ -58,10 +58,12 @@ class BackupController:
         
         if cookies is None:
             if (user_name is not None and password is not None):
+                print('Logging in')
                 self.login(user_name,password)
+                print('Logged in')
             else:
                 raise ValueError("Username and Password Argument is Missing")
-
+        print('Navigate to Backup URL')
         self.driver.get(backup_url)
         time.sleep(5) ## wait 5 seconds
         timeout=5 
@@ -71,11 +73,11 @@ class BackupController:
 
         if cookies is None:
             cookies = {'oid': self.driver.get_cookie("oid")["value"], 'sid':self.driver.get_cookie("sid")["value"]}
-
+        print('Reading file links')
         for link in soup.find_all('a', text='download'):
             file_path,file_name = self.extract_file_info(link["href"])
             file_url= self.org_link+file_path
-
+            print('Downloading file '+file_url)
             self.download_file(file_url,cookies,file_name,download_location)
 
         self.driver.quit()
